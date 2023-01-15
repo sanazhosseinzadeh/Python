@@ -1,108 +1,57 @@
 # Python
 
-Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy. This chapter helps you become an expert in using Python's object-oriented programming support.
+Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.
 
-If you do not have any previous experience with object-oriented (OO) programming, you may want to consult an introductory course on it or at least a tutorial of some sort so that you have a grasp of the basic concepts.
+Python is Interpreted − Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.
 
-However, here is small introduction of Object-Oriented Programming (OOP) to bring you at speed −
+Python is Interactive − You can actually sit at a Python prompt and interact with the interpreter directly to write your programs.
 
-Overview of OOP Terminology
-Class − A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
+Python is Object-Oriented − Python supports Object-Oriented style or technique of programming that encapsulates code within objects.
 
-Class variable − A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class's methods. Class variables are not used as frequently as instance variables are.
+Python is a Beginner's Language − Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.
 
-Data member − A class variable or instance variable that holds data associated with a class and its objects.
+History of Python
+Python was developed by Guido van Rossum in the late eighties and early nineties at the National Research Institute for Mathematics and Computer Science in the Netherlands.
 
-Function overloading − The assignment of more than one behavior to a particular function. The operation performed varies by the types of objects or arguments involved.
+Python is derived from many other languages, including ABC, Modula-3, C, C++, Algol-68, SmallTalk, and Unix shell and other scripting languages.
 
-Instance variable − A variable that is defined inside a method and belongs only to the current instance of a class.
+Python is copyrighted. Like Perl, Python source code is now available under the GNU General Public License (GPL).
 
-Inheritance − The transfer of the characteristics of a class to other classes that are derived from it.
+Python is now maintained by a core development team at the institute, although Guido van Rossum still holds a vital role in directing its progress.
 
-Instance − An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.
+Python Features
+Python's features include −
 
-Instantiation − The creation of an instance of a class.
+Easy-to-learn − Python has few keywords, simple structure, and a clearly defined syntax. This allows the student to pick up the language quickly.
 
-Method − A special kind of function that is defined in a class definition.
+Easy-to-read − Python code is more clearly defined and visible to the eyes.
 
-Object − A unique instance of a data structure that's defined by its class. An object comprises both data members (class variables and instance variables) and methods.
+Easy-to-maintain − Python's source code is fairly easy-to-maintain.
 
-Operator overloading − The assignment of more than one function to a particular operator.
+A broad standard library − Python's bulk of the library is very portable and cross-platform compatible on UNIX, Windows, and Macintosh.
 
-Creating Classes
-The class statement creates a new class definition. The name of the class immediately follows the keyword class followed by a colon as follows −
+Interactive Mode − Python has support for an interactive mode which allows interactive testing and debugging of snippets of code.
 
-class ClassName:
-   'Optional class documentation string'
-   class_suite
-The class has a documentation string, which can be accessed via ClassName.__doc__.
+Portable − Python can run on a wide variety of hardware platforms and has the same interface on all platforms.
 
-The class_suite consists of all the component statements defining class members, data attributes and functions.
+Extendable − You can add low-level modules to the Python interpreter. These modules enable programmers to add to or customize their tools to be more efficient.
 
-Example
-Following is the example of a simple Python class −
+Databases − Python provides interfaces to all major commercial databases.
 
-class Employee:
-   'Common base class for all employees'
-   empCount = 0
+GUI Programming − Python supports GUI applications that can be created and ported to many system calls, libraries and windows systems, such as Windows MFC, Macintosh, and the X Window system of Unix.
 
-   def __init__(self, name, salary):
-      self.name = name
-      self.salary = salary
-      Employee.empCount += 1
-   
-   def displayCount(self):
-     print "Total Employee %d" % Employee.empCount
+Scalable − Python provides a better structure and support for large programs than shell scripting.
 
-   def displayEmployee(self):
-      print "Name : ", self.name,  ", Salary: ", self.salary
-The variable empCount is a class variable whose value is shared among all instances of a this class. This can be accessed as Employee.empCount from inside the class or outside the class.
+Apart from the above-mentioned features, Python has a big list of good features, few are listed below −
 
-The first method __init__() is a special method, which is called class constructor or initialization method that Python calls when you create a new instance of this class.
+It supports functional and structured programming methods as well as OOP.
 
-You declare other class methods like normal functions with the exception that the first argument to each method is self. Python adds the self argument to the list for you; you do not need to include it when you call the methods.
+It can be used as a scripting language or can be compiled to byte-code for building large applications.
 
-Creating Instance Objects
-To create instances of a class, you call the class using class name and pass in whatever arguments its __init__ method accepts.
+It provides very high-level dynamic data types and supports dynamic type checking.
 
-"This would create first object of Employee class"
-emp1 = Employee("Zara", 2000)
-"This would create second object of Employee class"
-emp2 = Employee("Manni", 5000)
-Accessing Attributes
-You access the object's attributes using the dot operator with object. Class variable would be accessed using class name as follows −
+It supports automatic garbage collection.
 
-emp1.displayEmployee()
-emp2.displayEmployee()
-print "Total Employee %d" % Employee.empCount
-
-
-
-
-#!/usr/bin/python
-
-class Employee:
-   'Common base class for all employees'
-   empCount = 0
-
-   def __init__(self, name, salary):
-      self.name = name
-      self.salary = salary
-      Employee.empCount += 1
-   
-   def displayCount(self):
-     print "Total Employee %d" % Employee.empCount
-
-   def displayEmployee(self):
-      print "Name : ", self.name,  ", Salary: ", self.salary
-
-"This would create first object of Employee class"
-emp1 = Employee("Zara", 2000)
-"This would create second object of Employee class"
-emp2 = Employee("Manni", 5000)
-emp1.displayEmployee()
-emp2.displayEmployee()
-print "Total Employee %d" % Employee.empCount
-
+It can be easily integrated with C, C++, COM, ActiveX, CORBA, and Java.
 
 
