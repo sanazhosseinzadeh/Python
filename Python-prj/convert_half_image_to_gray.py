@@ -1,27 +1,28 @@
 import cv2
 import numpy as np
 
-# Load the image
-image = cv2.imread('dog.jpg')
+# بارگذاری تصویر
+image = cv2.imread('Python/Python-prj/pizza.jpg')
 
-# Get the dimensions of the image
+# ابعاد تصویر
 height, width, _ = image.shape
 
-# Split the image in half (vertically)
-left_half = image[:, :width//2]
-right_half = image[:, width//2:]
+# تقسیم تصویر به دو نیمه
+half_width = width // 2
 
-# Convert the right half to grayscale
-right_half_gray = cv2.cvtColor(right_half, cv2.COLOR_BGR2GRAY)
+# ایجاد نسخه خاکستری تصویر
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+gray_image_colored = cv2.cvtColor(gray_image, cv2.COLOR_GRAY2BGR)
 
-# Convert grayscale back to 3 channels to match the original image's shape
-right_half_gray = cv2.cvtColor(right_half_gray, cv2.COLOR_GRAY2BGR)
+# قرار دادن نیمی از تصویر به رنگ خاکستری
+image[:, half_width:] = gray_image_colored[:, half_width:]
 
-# Combine the left half (original) and the right half (grayscale)
-combined_image = np.hstack((left_half, right_half_gray))
+# نمایش تصویر
+cv2.imshow('Gray Half Image', image)
 
-# Save or display the result
-cv2.imwrite('half_image_grayscale.jpg', combined_image)
-cv2.imshow('Half Grayscale Image', combined_image)
+# ذخیره تصویر
+cv2.imwrite('Python/Python-prj/pizza.jpg', image)
+
+# منتظر ماندن تا کاربر یک کلید را فشار دهد
 cv2.waitKey(0)
 cv2.destroyAllWindows()
