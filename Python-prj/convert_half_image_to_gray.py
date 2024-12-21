@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # بارگذاری تصویر
-image = cv2.imread('Python/Python-prj/pizza.jpg')
+image = cv2.imread('Python-prj/pizza.jpg')
 
 # ابعاد تصویر
 height, width, _ = image.shape
@@ -21,7 +21,7 @@ image[:, half_width:] = gray_image_colored[:, half_width:]
 cv2.imshow('Gray Half Image', image)
 
 # ذخیره تصویر
-cv2.imwrite('output_image.jpg', image)
+cv2.imwrite('Python-prj/pizza.jpg', image)
 
 # منتظر ماندن تا کاربر یک کلید را فشار دهد
 cv2.waitKey(0)
