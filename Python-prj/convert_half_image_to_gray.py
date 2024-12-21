@@ -21,7 +21,7 @@ image[:, half_width:] = gray_image_colored[:, half_width:]
 cv2.imshow('Gray Half Image', image)
 
 # ذخیره تصویر
-cv2.imwrite('Python/Python-prj/pizza.jpg', image)
+cv2.imwrite('output_image.jpg', image)
 
 # منتظر ماندن تا کاربر یک کلید را فشار دهد
 cv2.waitKey(0)
